@@ -9,11 +9,16 @@
   </header>
 
   <nav>
-    <ul>
+    <ul class="dropdown">
       <li><a href="#about">Über mich</a></li>
-      <li><a href="#language1">Sprache 1</a></li>
-      <li><a href="#language2">Sprache 2</a></li>
-      <li><a href="#language3">Sprache 3</a></li>
+      <li class="dropdown-item">
+        <a href="#">Programmierskills</a>
+        <ul class="dropdown-menu">
+          <li><a href="#language1">Sprache 1</a></li>
+          <li><a href="#language2">Sprache 2</a></li>
+          <li><a href="#language3">Sprache 3</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -42,4 +47,4 @@
 
   <section id="language3">
     <h2>Sprache 3</h2>
-    <p>Mit Sprache 3 habe ich mich auf die Entwicklung von mobilen Anwendungen konzentriert. Ich habe eine Cross-Platform-App mit React Native entwickelt, die es Benutzern ermöglicht, Rezepte zu entdecken,
+    <p>Mit Sprache 3
