@@ -2,13 +2,16 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="your-animations.css">
+  <script src="your-javascript-library.js"></script>
 </head>
 <body>
   <header>
     <h1>Meine Programmierprojekte</h1>
+    <div id="menu-icon" onclick="toggleMenu()"></div>
   </header>
 
-  <nav>
+  <nav id="nav-menu">
     <ul class="dropdown">
       <li><a href="#about">Über mich</a></li>
       <li class="dropdown-item">
@@ -22,7 +25,7 @@
     </ul>
   </nav>
 
-  <section id="about">
+  <section id="about" class="scroll-reveal">
     <h2>Über mich</h2>
     <p>Ich bin ein leidenschaftlicher Programmierer mit Erfahrung in verschiedenen Sprachen und Technologien. Während meiner Karriere habe ich an einer Vielzahl von Projekten gearbeitet und mein Wissen in den folgenden Bereichen erweitert:</p>
     <ul>
@@ -33,18 +36,50 @@
     </ul>
   </section>
 
-  <section id="language1">
+  <section id="language1" class="scroll-reveal">
     <h2>Sprache 1</h2>
     <p>In meiner Arbeit mit Sprache 1 habe ich eine fortschrittliche Webanwendung entwickelt, die es Benutzern ermöglicht, ihre Aufgaben zu verwalten und zu organisieren. Ich war verantwortlich für das Design und die Implementierung der Benutzeroberfläche sowie die Integration mit dem Backend-Server.</p>
     <p>Ich habe auch eine Reihe von APIs entwickelt, um Daten mit externen Diensten auszutauschen und die Funktionalität der Anwendung zu erweitern. Dieses Projekt hat mir geholfen, meine Fähigkeiten in der Frontend-Entwicklung zu verbessern und komplexe Anwendungen effizient zu gestalten.</p>
   </section>
 
-  <section id="language2">
+  <section id="language2" class="scroll-reveal">
     <h2>Sprache 2</h2>
     <p>In Sprache 2 habe ich an einer E-Commerce-Website gearbeitet, die es Benutzern ermöglicht, Produkte zu suchen, zu bestellen und zu bezahlen. Ich war Teil eines Teams von Entwicklern und war für die Implementierung des Warenkorbsystems und der Zahlungsintegration zuständig.</p>
     <p>Während dieses Projekts habe ich meine Fähigkeiten in der Backend-Entwicklung weiterentwickelt, insbesondere in der Arbeit mit Datenbanken und der Optimierung der Leistung. Ich habe auch Erfahrung im Umgang mit sicheren Zahlungsgateways und der Gewährleistung der Datensicherheit gesammelt.</p>
   </section>
 
-  <section id="language3">
+  <section id="language3" class="scroll-reveal">
     <h2>Sprache 3</h2>
-    <p>Mit Sprache 3
+    <p>Mit Sprache 3 habe ich...</p>
+  </section>
+
+  <script>
+    // Menü-Animation
+    function toggleMenu() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+
+    // Animationsübergänge
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+      var reveals = document.querySelectorAll('.scroll-reveal');
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('active');
+        } else {
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+
+    // Weitere JavaScript-Funktionen für die Lightbox-Galerie, Formularüberprüfung usw. hier einfügen
+
+  </script>
+</body>
+</html>
