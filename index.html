@@ -1,86 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="your-animations.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alireza Naderi – Cloud & DevOps Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts: Beispiel mit Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Meine Programmierprojekte</h1>
-    <div id="menu-icon" onclick="toggleMenu()"></div>
+    <h1>Alireza Naderi</h1>
+    <p>Cloud & DevOps Engineer</p>
   </header>
-
-  <nav id="nav-menu">
-    <ul class="dropdown">
-      <li><a href="#about">Über mich</a></li>
-      <li class="dropdown-item">
-        <a href="#">Programmierskills</a>
-        <ul class="dropdown-menu">
-          <li><a href="#language1">Sprache 1</a></li>
-          <li><a href="#language2">Sprache 2</a></li>
-          <li><a href="#language3">Sprache 3</a></li>
-        </ul>
-      </li>
+  <nav>
+    <ul>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#erfahrung">Erfahrung</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#ausbildung">Ausbildung</a></li>
+      <li><a href="#sprachen">Sprachen</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
-
-  <section id="about" class="scroll-reveal">
-    <h2>Über mich</h2>
-    <p>Ich bin ein leidenschaftlicher Programmierer mit Erfahrung in verschiedenen Sprachen und Technologien. Während meiner Karriere habe ich an einer Vielzahl von Projekten gearbeitet und mein Wissen in den folgenden Bereichen erweitert:</p>
-    <ul>
-      <li>Webentwicklung (HTML, CSS, JavaScript, React)</li>
-      <li>Backend-Entwicklung (Python, Node.js)</li>
-      <li>Datenbanken (MySQL, MongoDB)</li>
-      <li>Mobile Entwicklung (React Native)</li>
-    </ul>
-  </section>
-
-  <section id="language1" class="scroll-reveal">
-    <h2>Sprache 1</h2>
-    <p>In meiner Arbeit mit Sprache 1 habe ich eine fortschrittliche Webanwendung entwickelt, die es Benutzern ermöglicht, ihre Aufgaben zu verwalten und zu organisieren. Ich war verantwortlich für das Design und die Implementierung der Benutzeroberfläche sowie die Integration mit dem Backend-Server.</p>
-    <p>Ich habe auch eine Reihe von APIs entwickelt, um Daten mit externen Diensten auszutauschen und die Funktionalität der Anwendung zu erweitern. Dieses Projekt hat mir geholfen, meine Fähigkeiten in der Frontend-Entwicklung zu verbessern und komplexe Anwendungen effizient zu gestalten.</p>
-  </section>
-
-  <section id="language2" class="scroll-reveal">
-    <h2>Sprache 2</h2>
-    <p>In Sprache 2 habe ich an einer E-Commerce-Website gearbeitet, die es Benutzern ermöglicht, Produkte zu suchen, zu bestellen und zu bezahlen. Ich war Teil eines Teams von Entwicklern und war für die Implementierung des Warenkorbsystems und der Zahlungsintegration zuständig.</p>
-    <p>Während dieses Projekts habe ich meine Fähigkeiten in der Backend-Entwicklung weiterentwickelt, insbesondere in der Arbeit mit Datenbanken und der Optimierung der Leistung. Ich habe auch Erfahrung im Umgang mit sicheren Zahlungsgateways und der Gewährleistung der Datensicherheit gesammelt.</p>
-  </section>
-
-  <section id="language3" class="scroll-reveal">
-    <h2>Sprache 3</h2>
-    <p>Mit Sprache 3 habe ich...</p>
-  </section>
-
-  <script>
-    // Menü-Animation
-    function toggleMenu() {
-      var menu = document.getElementById('nav-menu');
-      menu.classList.toggle('show');
-    }
-
-    // Animationsübergänge
-    window.addEventListener('scroll', reveal);
-
-    function reveal() {
-      var reveals = document.querySelectorAll('.scroll-reveal');
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = 150;
-
-        if (revealTop < windowHeight - revealPoint) {
-          reveals[i].classList.add('active');
-        } else {
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-
-    // Weitere JavaScript-Funktionen für die Lightbox-Galerie, Formularüberprüfung usw. hier einfügen
-
-  </script>
+  <main>
+    <section id="profil">
+      <h2>Profil</h2>
+      <p>Zukünftiger Bachelor-Absolvent der Technischen Informatik mit praktischer Erfahrung in Cloud-, DevOps- und Backend-Entwicklung. Schwerpunkte liegen auf Automatisierung, API-Design und Infrastrukturmanagement.</p>
+    </section>
+    <section id="erfahrung">
+      <h2>Beruflicher Werdegang</h2>
+      <article class="job">
+        <h3>Public Cloud Group (06/2024 - 06/2025)</h3>
+        <p>Softwareentwicklung / Cloud-Automatisierung</p>
+        <ul>
+          <li>Weiterentwicklung der ALPACA-Plattform</li>
+          <li>Implementierung von Asynchronisierungsfunktionen</li>
+          <!-- Weitere Punkte können ergänzt werden -->
+        </ul>
+      </article>
+      <article class="job">
+        <h3>DB Systel GmbH (10/2023 - 03/2024)</h3>
+        <p>Praktikant DevOps-Entwicklung</p>
+      </article>
+      <article class="job">
+        <h3>Continental AG (11/2021 - 03/2022)</h3>
+        <p>Praktikant Embedded Softwareentwicklung</p>
+        <ul>
+          <li>Entwicklung eines Algorithmus für autonomes Fahren</li>
+          <li>Implementierung einer Plugin-Architektur</li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3>Frequi (01/2019 - 02/2019)</h3>
+        <p>Praktikant Webentwicklung</p>
+      </article>
+    </section>
+    <section id="skills">
+      <h2>Technische Skills</h2>
+      <ul>
+        <li><strong>Programmiersprachen:</strong> Python, Ruby, JavaScript, Shell, Java</li>
+        <li><strong>Cloud & Infrastructure:</strong> AWS, Azure, GCP, Terraform, Bicep, Docker, YAML</li>
+        <li><strong>Frameworks & Technologien:</strong> Flask, FastAPI, RQ</li>
+        <li><strong>Datenbanken:</strong> SQL, SQLite, InfluxDB</li>
+        <li><strong>DevOps & Versionskontrolle:</strong> Git, GitHub Actions, GitLab CI</li>
+        <li><strong>Projektmanagement:</strong> Jira, Redmine, Confluence, Scrum</li>
+      </ul>
+    </section>
+    <section id="ausbildung">
+      <h2>Ausbildung</h2>
+      <p><strong>Hochschule RheinMain</strong> – Bachelor of Science, Technische Informatik (seit 10/2020)</p>
+      <p><strong>Max-Beckmann-Schule</strong> – Abitur (08/2017 - 06/2020) <span class="note">(Durchschnitt 2,2, Schwerpunkt Mathematik und Chemie)</span></p>
+    </section>
+    <section id="sprachen">
+      <h2>Sprachen</h2>
+      <p>Deutsch (Muttersprache), Persisch (Muttersprache), Englisch (verhandlungssicher), Spanisch (Grundkenntnisse)</p>
+    </section>
+  </main>
+  <footer id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Gießfeldstr. 15, 60488 Frankfurt am Main</p>
+    <p>Telefon: 01736011705 | Email: <a href="mailto:ar.naderi@hotmail.com">ar.naderi@hotmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/alireza-naderi-b1b104157">alireza-naderi</a></p>
+  </footer>
 </body>
 </html>
