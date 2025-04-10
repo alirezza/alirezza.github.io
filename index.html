@@ -9,11 +9,14 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button id="dark-mode-toggle" aria-label="Dark Mode wechseln">🌙</button>
+  
   <header>
     <h1>Alireza Naderi</h1>
     <p>Cloud & DevOps Engineer</p>
   </header>
-  <nav>
+  <nav id="navbar">
     <ul>
       <li><a href="#profil">Profil</a></li>
       <li><a href="#erfahrung">Erfahrung</a></li>
@@ -24,11 +27,11 @@
     </ul>
   </nav>
   <main>
-    <section id="profil">
+    <section id="profil" class="section">
       <h2>Profil</h2>
       <p>Zukünftiger Bachelor-Absolvent der Technischen Informatik mit praktischer Erfahrung in Cloud-, DevOps- und Backend-Entwicklung. Schwerpunkte liegen auf Automatisierung, API-Design und Infrastrukturmanagement.</p>
     </section>
-    <section id="erfahrung">
+    <section id="erfahrung" class="section">
       <h2>Beruflicher Werdegang</h2>
       <article class="job">
         <h3>Public Cloud Group (06/2024 - 06/2025)</h3>
@@ -36,7 +39,6 @@
         <ul>
           <li>Weiterentwicklung der ALPACA-Plattform</li>
           <li>Implementierung von Asynchronisierungsfunktionen</li>
-          <!-- Weitere Punkte können ergänzt werden -->
         </ul>
       </article>
       <article class="job">
@@ -56,7 +58,7 @@
         <p>Praktikant Webentwicklung</p>
       </article>
     </section>
-    <section id="skills">
+    <section id="skills" class="section">
       <h2>Technische Skills</h2>
       <ul>
         <li><strong>Programmiersprachen:</strong> Python, Ruby, JavaScript, Shell, Java</li>
@@ -67,12 +69,12 @@
         <li><strong>Projektmanagement:</strong> Jira, Redmine, Confluence, Scrum</li>
       </ul>
     </section>
-    <section id="ausbildung">
+    <section id="ausbildung" class="section">
       <h2>Ausbildung</h2>
       <p><strong>Hochschule RheinMain</strong> – Bachelor of Science, Technische Informatik (seit 10/2020)</p>
-      <p><strong>Max-Beckmann-Schule</strong> – Abitur (08/2017 - 06/2020) <span class="note">(Durchschnitt 2,2, Schwerpunkt Mathematik und Chemie)</span></p>
+      <p><strong>Max-Beckmann-Schule</strong> – Abitur (08/2017 - 06/2020) <span class="note">(Durchschnitt: 2,2, Schwerpunkt Mathematik und Chemie)</span></p>
     </section>
-    <section id="sprachen">
+    <section id="sprachen" class="section">
       <h2>Sprachen</h2>
       <p>Deutsch (Muttersprache), Persisch (Muttersprache), Englisch (verhandlungssicher), Spanisch (Grundkenntnisse)</p>
     </section>
@@ -83,5 +85,6 @@
     <p>Telefon: 01736011705 | Email: <a href="mailto:ar.naderi@hotmail.com">ar.naderi@hotmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/alireza-naderi-b1b104157">alireza-naderi</a></p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
