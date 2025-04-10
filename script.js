@@ -1,28 +1,56 @@
-// JS-Datei: your-javascript-file.js
-// Diese Datei enthält das JavaScript für die interaktiven Funktionen der Webseite
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const bodyElement = document.body;
 
-// Menü-Animation
-function toggleMenu() {
-  var menu = document.getElementById('nav-menu');
-  menu.classList.toggle('show');
+// Prüfe, ob beim Laden bereits eine Einstellung im LocalStorage existiert
+if(localStorage.getItem('darkMode') === 'enabled'){
+  bodyElement.classList.add('dark-mode');
 }
 
-// Animationsübergänge
-window.addEventListener('scroll', reveal);
-
-function reveal() {
-  var reveals = document.querySelectorAll('.scroll-reveal');
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add('active');
-    } else {
-      reveals[i].classList.remove('active');
-    }
+darkModeToggle.addEventListener('click', () => {
+  bodyElement.classList.toggle('dark-mode');
+  // Save the mode in localStorage
+  if(bodyElement.classList.contains('dark-mode')){
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
   }
-}
+});
 
-// Weitere JavaScript-Funktionen für die Lightbox-Galerie, Formularüberprüfung usw. hier einfügen
+// Smooth Scrolling
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetID = this.getAttribute('href');
+    document.querySelector(targetID).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Dynamisches Hervorheben der Navigation
+const sections = document.querySelectorAll('main .section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+const observerOptions = {
+  threshold: 0.3
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === `#${entry.target.id}`) {
+          link.classList.add('active');
+        }
+      });
+      // Sichtbar machen, falls noch nicht geschehen
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
