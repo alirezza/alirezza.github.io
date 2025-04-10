@@ -1,4 +1,4 @@
-/* Reset grundlegender Elemente */
+/* Grundlegender Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,30 @@ body {
   line-height: 1.6;
   color: #333;
   background: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode Style */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* Dark Mode für Links */
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+/* Button Dark Mode Toggle */
+#dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 /* Header */
@@ -17,6 +41,9 @@ header {
   background: #f4f4f4;
   padding: 20px;
   text-align: center;
+}
+body.dark-mode header {
+  background: #1e1e1e;
 }
 
 header h1 {
@@ -28,10 +55,16 @@ header p {
   font-size: 1.2rem;
   color: #666;
 }
+body.dark-mode header p {
+  color: #ccc;
+}
 
 /* Navigation */
 nav {
   background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 500;
 }
 
 nav ul {
@@ -49,26 +82,35 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
-/* Hauptbereiche */
+nav ul li a.active,
+nav ul li a:hover {
+  color: #bb86fc;
+}
+
+/* Hauptbereich */
 main {
   max-width: 900px;
   margin: 20px auto;
   padding: 0 20px;
 }
 
-section {
+.section {
   margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-section h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+/* Sichtbar wenn in Viewport */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Job Details */
 .job {
   margin-bottom: 20px;
 }
