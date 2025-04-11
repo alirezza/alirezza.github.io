@@ -1,4 +1,4 @@
-/* Grundlegender Reset */
+/* Reset und Basisstil */
 * {
   margin: 0;
   padding: 0;
@@ -8,32 +8,20 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
   background: #fff;
-  transition: background 0.3s, color 0.3s;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode Style */
+/* Dark Mode */
 body.dark-mode {
   background: #121212;
   color: #e0e0e0;
 }
 
-/* Dark Mode für Links */
+/* Dark Mode Links */
 body.dark-mode a {
   color: #bb86fc;
-}
-
-/* Button Dark Mode Toggle */
-#dark-mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 1000;
 }
 
 /* Header */
@@ -42,6 +30,7 @@ header {
   padding: 20px;
   text-align: center;
 }
+
 body.dark-mode header {
   background: #1e1e1e;
 }
@@ -55,6 +44,7 @@ header p {
   font-size: 1.2rem;
   color: #666;
 }
+
 body.dark-mode header p {
   color: #ccc;
 }
@@ -85,12 +75,12 @@ nav ul li a {
   transition: color 0.3s;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: #bb86fc;
 }
 
-/* Hauptbereich */
+/* Hauptinhalt */
 main {
   max-width: 900px;
   margin: 20px auto;
@@ -99,25 +89,28 @@ main {
 
 .section {
   margin-bottom: 40px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Sichtbar wenn in Viewport */
+/* Sichtbar bei Scroll */
 .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Job Details */
-.job {
-  margin-bottom: 20px;
+/* Berufserfahrung */
+.job h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
 }
 
-.job h3 {
-  margin-bottom: 5px;
-  font-size: 1.4rem;
+.job span {
+  font-size: 0.9rem;
+  color: #777;
 }
 
 /* Footer */
@@ -137,6 +130,7 @@ footer a {
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    align-items: center;
   }
   nav ul li {
     margin: 10px 0;
