@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alireza Naderi – Cloud & DevOps Engineer</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts Beispiel -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <!-- Für PyScript (optional, falls du diesen Weg wählst) -->
-  <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
 </head>
 <body>
+  <!-- Dark Mode Toggle Button -->
   <button id="dark-mode-toggle" aria-label="Dark Mode wechseln">🌙</button>
+  
+  <!-- Header -->
   <header>
     <h1>Alireza Naderi</h1>
     <p>Cloud & DevOps Engineer</p>
   </header>
+  
+  <!-- Navigation -->
   <nav id="navbar">
     <ul>
       <li><a href="#profil">Profil</a></li>
@@ -23,53 +26,85 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#ausbildung">Ausbildung</a></li>
       <li><a href="#sprachen">Sprachen</a></li>
-      <li><a href="#spiel">Spiel</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
+  
+  <!-- Hauptinhalt -->
   <main>
+    <!-- Profil -->
     <section id="profil" class="section">
       <h2>Profil</h2>
-      <p>Zukünftiger Bachelor-Absolvent der Technischen Informatik mit fundierter Praxiserfahrung in Cloud-, DevOps- und Backend-Entwicklung. Mit besonderem Fokus auf Automatisierung, API-Design und Infrastrukturmanagement setze ich moderne Technologien gezielt ein – stets orientiert an effizienten Systemlösungen.</p>
+      <p>
+        Zukünftiger Bachelor-Absolvent der Technischen Informatik mit fundierter Praxiserfahrung in Cloud-, DevOps- und Backend-Entwicklung. 
+        Mit besonderem Fokus auf Automatisierung, API-Design und Infrastrukturmanagement setze ich moderne Technologien gezielt ein – stets orientiert an effizienten Systemlösungen.
+      </p>
     </section>
+    
+    <!-- Beruflicher Werdegang -->
     <section id="erfahrung" class="section">
       <h2>Beruflicher Werdegang</h2>
-      <!-- Beruflicher Werdegang analog zu oben -->
+      <article class="job">
+        <h3>Public Cloud Group <span>(06/2024 – 06/2025)</span></h3>
+        <p>Softwareentwicklung / Cloud-Automatisierung</p>
+        <ul>
+          <li>Weiterentwicklung der ALPACA-Plattform</li>
+          <li>Implementierung asynchroner Funktionen zur Effizienzsteigerung</li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3>DB Systel GmbH <span>(10/2023 – 03/2024)</span></h3>
+        <p>Praktikant in der DevOps-Entwicklung</p>
+      </article>
+      <article class="job">
+        <h3>Continental AG <span>(11/2021 – 03/2022)</span></h3>
+        <p>Praktikant in der Embedded Softwareentwicklung</p>
+        <ul>
+          <li>Entwicklung und Test innovativer Ansätze im Bereich autonomes Fahren</li>
+          <li>Implementierung einer modularen Plugin-Architektur</li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3>Frequi <span>(01/2019 – 02/2019)</span></h3>
+        <p>Praktikant in der Webentwicklung</p>
+      </article>
     </section>
+    
+    <!-- Technische Skills -->
     <section id="skills" class="section">
       <h2>Technische Skills</h2>
-      <!-- Skills analog zu oben -->
+      <ul>
+        <li><strong>Programmiersprachen:</strong> Python, Ruby, JavaScript, Shell, Java</li>
+        <li><strong>Cloud & Infrastruktur:</strong> AWS, Azure, GCP; Terraform, Bicep, Docker, YAML</li>
+        <li><strong>Frameworks & Tools:</strong> Flask, FastAPI, RQ, Git, GitHub Actions, GitLab CI</li>
+        <li><strong>Projektmanagement:</strong> Jira, Redmine, Confluence, Scrum</li>
+      </ul>
     </section>
+    
+    <!-- Ausbildung -->
     <section id="ausbildung" class="section">
       <h2>Ausbildung</h2>
-      <!-- Ausbildungsinformationen analog zu oben -->
+      <p><strong>Hochschule RheinMain (seit 10/2020):</strong> Bachelor of Science – Technische Informatik</p>
+      <p><strong>Max-Beckmann-Schule (08/2017 – 06/2020):</strong> Abitur, Durchschnitt 2,2 (Schwerpunkte: Mathematik & Chemie)</p>
     </section>
+    
+    <!-- Sprachen -->
     <section id="sprachen" class="section">
       <h2>Sprachen</h2>
       <p>Deutsch (Muttersprache), Persisch (Muttersprache), Englisch (verhandlungssicher), Spanisch (Grundkenntnisse)</p>
     </section>
-    <!-- Hier wird das Spiel eingebettet -->
-    <section id="spiel" class="section">
-      <h2>Interaktives Spiel</h2>
-      <!-- Option 1: Iframe-Einbettung -->
-      <iframe src="https://deinspielserver.example.com" width="100%" height="600" frameborder="0">
-        Dein Browser unterstützt leider keine Iframes.
-      </iframe>
-      
-      <!-- Option 2: PyScript-Integration (alternativ, falls kompatibel) -->
-      <!--
-      <py-script>
-      # Dein in PyScript angepasster Python-Code
-      </py-script>
-      -->
-    </section>
   </main>
+  
+  <!-- Footer / Kontakt -->
   <footer id="kontakt">
     <h2>Kontakt</h2>
     <p>Gießfeldstr. 15, 60488 Frankfurt am Main</p>
-    <p>Telefon: 01736011705 | Email: <a href="mailto:ar.naderi@hotmail.com">ar.naderi@hotmail.com</a></p>
+    <p>Telefon: 01736011705</p>
+    <p>Email: <a href="mailto:ar.naderi@hotmail.com">ar.naderi@hotmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/arnaderi" target="_blank" rel="noopener noreferrer">linkedin.com/in/arnaderi</a></p>
   </footer>
+  
+  <!-- JavaScript für interaktive Elemente (Smooth Scrolling, Dark Mode, Navigation-Hervorhebung) -->
   <script src="script.js"></script>
 </body>
 </html>
