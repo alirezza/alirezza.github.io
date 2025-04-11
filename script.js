@@ -2,14 +2,13 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const bodyElement = document.body;
 
-// Prüfe, ob beim Laden bereits eine Einstellung im LocalStorage existiert
+// Prüfe gespeicherten Dark Mode im LocalStorage
 if(localStorage.getItem('darkMode') === 'enabled'){
   bodyElement.classList.add('dark-mode');
 }
 
 darkModeToggle.addEventListener('click', () => {
   bodyElement.classList.toggle('dark-mode');
-  // Save the mode in localStorage
   if(bodyElement.classList.contains('dark-mode')){
     localStorage.setItem('darkMode', 'enabled');
   } else {
@@ -28,7 +27,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
   });
 });
 
-// Dynamisches Hervorheben der Navigation
+// Navigation-Hervorhebung und Sichtbarkeits-Animation
 const sections = document.querySelectorAll('main .section');
 const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -45,7 +44,6 @@ const observer = new IntersectionObserver((entries) => {
           link.classList.add('active');
         }
       });
-      // Sichtbar machen, falls noch nicht geschehen
       entry.target.classList.add('visible');
     }
   });
